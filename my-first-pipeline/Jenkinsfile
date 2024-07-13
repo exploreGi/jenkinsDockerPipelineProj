@@ -4,10 +4,11 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
+        docker { image 'openjdk:11' }
       }
       steps {
-        sh 'mvn --version'
+        sh 'javac HelloJenkins.java'
+        sh 'java HelloJenkins'
       }
     }
     stage('Front-end') {
