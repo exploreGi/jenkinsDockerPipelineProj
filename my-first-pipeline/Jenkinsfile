@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'openjdk:11' }
+        docker { image 'ranniuser/hellojenkins:v1' }
       }
       steps {
         sh 'java --version'
