@@ -7,8 +7,7 @@ pipeline {
         docker { image 'openjdk:11' }
       }
       steps {
-        sh 'javac HelloJenkins.java'
-        sh 'java HelloJenkins'
+        sh 'java --version'
       }
     }
     stage('Front-end') {
