@@ -4,12 +4,13 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'ranniuser/hellojenkins:v1' }
+        docker { image 'apache/beam_java17_sdk' }
       }
       steps {
         sh 'java --version'
-        sh 'javac HelloJenkins.java'
-        sh 'java HelloJenkins'
+        sh 'javac my-first-pipeline/HelloJenkins.java'
+        sh 'java my-first-pipeline/HelloJenkins'
+       
       }
     }
     stage('Front-end') {
