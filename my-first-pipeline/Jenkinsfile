@@ -4,13 +4,11 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'apache/beam_java17_sdk' }
+        docker { image 'maven:3.8.1-adoptopenjdk-11' }
       }
       steps {
-        sh 'java --version'
-        sh 'javac my-first-pipeline/HelloJenkins.java'
-        sh 'java my-first-pipeline/HelloJenkins'
-       
+        sh 'mvn --version'
+            
       }
     }
     stage('Front-end') {
