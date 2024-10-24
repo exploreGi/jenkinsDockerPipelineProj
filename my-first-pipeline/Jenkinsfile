@@ -8,7 +8,8 @@ pipeline {
       }
       steps {
         sh 'java --version'
-        sh 'docker run -it ranniuser/hellojenkins:v1'
+        sh 'javac HelloJenkins.java'
+        sh 'java HelloJenkins'
       }
     }
     stage('Front-end') {
