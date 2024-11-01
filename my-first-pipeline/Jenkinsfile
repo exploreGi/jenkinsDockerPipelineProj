@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'rajani:maven-1' }
+        docker { image 'rajani:maven-2' }
       }
       steps {
         sh 'mvn --version'
